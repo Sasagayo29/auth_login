@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+/* Variáveis Globais */
+:root {
+  --bg-page-gradient: linear-gradient(135deg, #2c003e, #0f0c29, #302b63);
+  --white: #ffffff;
+}
+
+/* Reset Básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Fundo Animado Global */
+body {
+  background: var(--bg-page-gradient);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
